@@ -42,7 +42,7 @@ This installs:
 3. Go to the **Security** tab.
 4. Scroll to **Personal access tokens** → click **Generate new token**.
 5. Name it something identifiable, e.g. `opencode-mcp-proxy`.
-6. Under **Scopes**, select **File content: Read** (`file_content:read`) — read-only, no write access.
+6. Under **Scopes**, select **File content: Read** (`file_content:read`) — read-only (better to give complete read access, i.e. all read access option/toggle), no write access.
 7. Click **Generate token** and copy it immediately (it's shown only once).
 
 > If you need to access files inside an organization/team, make sure the account that generated the token has at least **"Can view"** access to that file or team folder.
