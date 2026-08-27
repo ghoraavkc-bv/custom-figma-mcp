@@ -62,7 +62,6 @@ Add your token:
 FIGMA_PAT=figd_your_actual_token_here
 ```
 
-Do **not** commit this file. It should already be listed in `.gitignore`.
 
 ## Step 5: Register the Server with OpenCode
 
