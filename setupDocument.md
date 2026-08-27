@@ -84,15 +84,34 @@ Add an entry under `mcp`, pointing to the **absolute path** of `index.js`:
   }
 }
 ```
-If you have multiple node versions, use this code (the system will be using the highest node version):
+Replace `/absolute/path/to/custom-figma-mcp/index.js` with the real path — for example:
 
+```bash
+/Users/<your-username>/projects/custom-figma-mcp/index.js
+```
+Tip: run `pwd` inside the project folder to get the exact absolute path.
+
+-----------------------------
+
+## *If you have multiple node versions, do these:*
+
+### 5.1 List all the node versions
+```shell
+nvm ls
+```
+### 5.2 Select the node version which is higher than 18.x, and get the path of that node.
+```shell
+nvm which <the node you want to use>
+```
+example: nvm which v10.23.3
+### 5.3 Add an entry under `mcp`, pointing to the **absolute path** of `index.js`:
 ```json
 {
   "mcp": {
     "figma-dev": {
       "enabled": true,
       "type": "local",
-      "command": ["/usr/local/bin/node", "/absolute/path/to/custom-figma-mcp/index.js"]
+      "command": ["<node path>", "/absolute/path/to/custom-figma-mcp/index.js"]
     }
   }
 }
