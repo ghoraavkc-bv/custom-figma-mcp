@@ -160,3 +160,40 @@ You can paste the raw URL directly into your OpenCode prompt — no manual parsi
 | `403 Forbidden` from Figma API | Your token's account doesn't have view access to that file/team |
 | OpenCode doesn't detect the tool | Double-check the absolute path in `opencode.json` and restart OpenCode |
 | Large files time out or get truncated | Use `get_figma_node_details` on specific node IDs instead of pulling the whole file at once |
+
+
+## Troubleshooting
+
+*   **`FIGMA_PAT environment variable is missing`**
+    *   **Fix:** Ensure the `.env` file exists in your project root.
+    *   **Note:** Verify that you started the server directly from that specific root directory.
+
+*   **`403 Forbidden` from Figma API**
+    *   **Fix:** Check your Figma token permissions.
+    *   **Note:** The account tied to your token does not have view access to that specific file or team.
+
+*   **OpenCode doesn't detect the tool**
+    *   **Fix:** Double-check the absolute file path inside your `opencode.json` configuration file.
+    *   **Next Step:** Restart the OpenCode application to apply the changes.
+
+*   **Large files time out or get truncated**
+    *   **Fix:** Stop pulling the entire Figma file all at once.
+    *   **Alternative:** Use the `get_figma_node_details` tool to target and request specific node IDs instead.
+
+*   **`Figma API Error: unable to get local issuer certificate`**
+    *   download the respective certificate and add it to the environment. 
+    *   **Config Example:**
+        ```json
+        "figma-dev": {
+          "enabled": true,
+          "type": "local",
+          "command": [
+            "<node path>",
+            "/Users/<username>/Desktop/custom-figma-mcp/index.js"
+          ],
+          "environment": {
+            "NODE_EXTRA_CA_CERTS": "/Users/<username>/.config/opencode/certs/cisco-umbrella-ca.pem"
+          }
+        }
+        ```
+
