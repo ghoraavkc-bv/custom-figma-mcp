@@ -84,6 +84,19 @@ Add an entry under `mcp`, pointing to the **absolute path** of `index.js`:
   }
 }
 ```
+If you have multiple node versions, use this code (the system will be using the highest node version):
+
+```json
+{
+  "mcp": {
+    "figma-dev": {
+      "enabled": true,
+      "type": "local",
+      "command": ["/usr/local/bin/node", "/absolute/path/to/custom-figma-mcp/index.js"]
+    }
+  }
+}
+```
 
 Replace `/absolute/path/to/custom-figma-mcp/index.js` with the real path — for example:
 
