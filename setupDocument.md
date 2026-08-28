@@ -2,6 +2,9 @@
 
 This guide walks through setting up **custom-figma-mcp** — a local MCP (Model Context Protocol) proxy server that gives OpenCode read-only access to Figma files — on a Mac.
 
+## How to let opencode know what figma page your working on
+Open the figma page in your browser, copy the URL, give it to the opencode along with your prompt.
+
 ## Prerequisites
 
 - Node.js v18 or later (nodejs.org)
