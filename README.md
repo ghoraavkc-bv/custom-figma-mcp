@@ -1,10 +1,9 @@
 A lightweight local **MCP (Model Context Protocol)** server that gives AI coding agents (like OpenCode) structured, read-only access to Figma files — file hierarchies, node properties, and rendered images — without needing Figma's hosted/remote MCP integration.
 
-## How to let opencode know what figma page your working on
-Open the figma page in your browser, copy the URL, give it to the opencode along with your prompt.
-
 Figma's official remote MCP server is gated behind an allowlisted Client ID, which isn't practical for individual developers wiring up their own agent tooling. This project sidesteps that by talking directly to Figma's public REST API using a personal access token, exposed to the agent through a standard MCP tool interface over stdio.
 
+## How to let opencode know what figma page your working on
+Open the figma page in your browser, copy the URL, give it to the opencode along with your prompt.
 
 ## Why This Exists
 
